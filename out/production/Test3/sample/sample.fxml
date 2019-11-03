@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="404.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="336.0" minHeight="10.0" prefHeight="298.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TabPane>
+         <tabs>
+            <Tab text="Exact">
+               <content>
+                  <LineChart fx:id="exactChart" alternativeColumnFillVisible="true" nodeOrientation="LEFT_TO_RIGHT" title="Exact Solution">
+                    <xAxis>
+                      <NumberAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+               </content>
+            </Tab>
+             <Tab text="Euler">
+                 <content>
+                     <LineChart fx:id="eulerChart" alternativeColumnFillVisible="true" nodeOrientation="LEFT_TO_RIGHT" title="Euler Solution">
+                         <xAxis>
+                             <NumberAxis side="BOTTOM" />
+                         </xAxis>
+                         <yAxis>
+                             <NumberAxis side="LEFT" />
+                         </yAxis>
+                     </LineChart>
+                 </content>
+             </Tab>
+             <Tab text="Euler Improved">
+                 <content>
+                     <LineChart fx:id="impEulerChart" alternativeColumnFillVisible="true" nodeOrientation="LEFT_TO_RIGHT" title="Improved Euler Solution">
+                         <xAxis>
+                             <NumberAxis side="BOTTOM" />
+                         </xAxis>
+                         <yAxis>
+                             <NumberAxis side="LEFT" />
+                         </yAxis>
+                     </LineChart>
+                 </content>
+             </Tab>
+             <Tab text="Runge-Kutta">
+                 <content>
+                     <LineChart fx:id="rungeChart" alternativeColumnFillVisible="true" nodeOrientation="LEFT_TO_RIGHT" title="Runge-Kutta Solution">
+                         <xAxis>
+                             <NumberAxis side="BOTTOM" />
+                         </xAxis>
+                         <yAxis>
+                             <NumberAxis side="LEFT" />
+                         </yAxis>
+                     </LineChart>
+                 </content>
+             </Tab>
+         </tabs>
+      </TabPane>
+      <GridPane GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button mnemonicParsing="false" onAction="#plotTheChart" text="Compute" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="178.0" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+            <Label text="y0:" />
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
