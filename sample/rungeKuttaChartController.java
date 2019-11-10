@@ -105,7 +105,7 @@ public class rungeKuttaChartController implements Initializable {
         for(int i = 0; i < N; i++){
             exactSeries.getData().add(new XYChart.Data(x[i], y[i]));
         }
-        exactSeries.setName("Euler");
+        exactSeries.setName("Runge-Kutta");
         errorSeries.setName("Global Error");
         localErrorSeries.setName("Local Error");
         chart.getData().addAll(exactSeries);

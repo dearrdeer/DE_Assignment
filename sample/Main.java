@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
+    //Main window
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Differential Equation");

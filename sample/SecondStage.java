@@ -8,6 +8,7 @@ import javafx.scene.layout.Pane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+//Second window
 public class SecondStage implements Initializable {
     @FXML
     private Pane pane1, pane2, pane3;

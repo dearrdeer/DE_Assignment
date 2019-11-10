@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     @FXML
-    TextField y0Field, x0Field, XField, NField, xScaleField, yScaleField, xLowerBoundField, xUpperBoundField;
+    TextField y0Field, x0Field, XField, NField, xScaleField, xLowerBoundField, xUpperBoundField;
     public static double y0, x0, X, xScale, yScale, xLowerBound, xUpperBound;
     public static int N;
 
@@ -28,7 +28,6 @@ public class Controller implements Initializable {
         N = Integer.parseInt(NField.getText());
 
         xScale = Double.parseDouble(xScaleField.getText());
-        yScale = Double.parseDouble(yScaleField.getText());
         xLowerBound = Double.parseDouble(xLowerBoundField.getText());
         xUpperBound = Double.parseDouble(xUpperBoundField.getText());
 
