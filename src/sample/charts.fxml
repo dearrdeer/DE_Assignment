@@ -7,36 +7,26 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SecondStage">
+<TabPane tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SecondStage">
   <tabs>
     <Tab text="Exact">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-               <children>
-                  <LineChart fx:id="exactChart" layoutY="7.0" prefHeight="676.0" prefWidth="1024.0">
-                    <xAxis>
-                      <NumberAxis fx:id="xAxis" side="BOTTOM" autoRanging="false"/>
-                    </xAxis>
-                    <yAxis>
-                      <NumberAxis fx:id="yAxis" side="LEFT" autoRanging="false" />
-                    </yAxis>
-                  </LineChart>
-               </children></AnchorPane>
+        <fx:include fx:id="pane1" source="exactChart.fxml" />
       </content>
     </Tab>
     <Tab text="Euler">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-          <children>
-            <LineChart fx:id="eulerChart" layoutY="7.0" prefHeight="676.0" prefWidth="1024.0">
-              <xAxis>
-                <NumberAxis fx:id="xAxis" side="BOTTOM" autoRanging="false" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis fx:id="yAxis" side="LEFT" autoRanging="false" />
-              </yAxis>
-            </LineChart>
-          </children></AnchorPane>
+        <fx:include fx:id="pane2" source="eulerChart.fxml" />
+      </content>
+    </Tab>
+    <Tab text="Improved Euler">
+      <content>
+        <fx:include fx:id="pane3" source="improvedEulerChart.fxml" />
+      </content>
+    </Tab>
+    <Tab text="Runge-Kutta">
+      <content>
+        <fx:include fx:id="pane4" source="rungeKuttaChart.fxml" />
       </content>
     </Tab>
   </tabs>

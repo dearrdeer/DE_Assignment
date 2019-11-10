@@ -10,8 +10,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 
-
-<GridPane alignment="CENTER" hgap="10" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="560.0" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="sample.Controller">
+<GridPane alignment="CENTER" hgap="10" minHeight="-Infinity" minWidth="-Infinity" prefHeight="356.0" prefWidth="560.0" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <rowConstraints>
       <RowConstraints maxHeight="546.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
       <RowConstraints maxHeight="546.0" minHeight="10.0" prefHeight="208.0" vgrow="SOMETIMES" />
@@ -21,7 +20,7 @@
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
    </columnConstraints>
    <children>
-      <Button onAction="#buttonPressed" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Compute" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#buttonPressed" text="Compute" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
       <Label text="y' = sec(x) - y*tg(x)" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <font>
             <Font size="20.0" />
@@ -60,7 +59,7 @@
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <TextField fx:id="x0Field" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="198.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="198.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" fx:id="x0Field">
                <padding>
                   <Insets left="20.0" />
                </padding>
@@ -99,12 +98,12 @@
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <TextField fx:id="xScaleField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="119.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="119.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" fx:id="xScaleField">
                <padding>
                   <Insets left="20.0" />
                </padding>
             </TextField>
-            <Label text="yScale:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label text="xLowerBound:" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
@@ -112,10 +111,29 @@
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <TextField fx:id="yScaleField" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="119.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="63.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" fx:id="xLowerBoundField">
                <padding>
                   <Insets left="20.0" />
                </padding>
+               <GridPane.margin>
+                  <Insets right="70.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="xUpperBound:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="63.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" fx:id="xUpperBoundField">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets right="70.0" />
+               </GridPane.margin>
             </TextField>
          </children>
       </GridPane>
