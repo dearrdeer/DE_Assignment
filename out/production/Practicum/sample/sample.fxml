@@ -90,7 +90,7 @@
                   <Insets left="20.0" />
                </padding>
             </TextField>
-            <Label text="xScale:" GridPane.columnIndex="1">
+            <Label text="xLowerBound:" GridPane.columnIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
@@ -98,20 +98,7 @@
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="119.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" fx:id="xScaleField">
-               <padding>
-                  <Insets left="20.0" />
-               </padding>
-            </TextField>
-            <Label text="xLowerBound:" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <font>
-                  <Font size="18.0" />
-               </font>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-            </Label>
-            <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="63.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" fx:id="xLowerBoundField">
+            <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="63.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" fx:id="xLowerBoundField">
                <padding>
                   <Insets left="20.0" />
                </padding>
@@ -119,7 +106,7 @@
                   <Insets right="70.0" />
                </GridPane.margin>
             </TextField>
-            <Label text="xUpperBound:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Label text="xUpperBound:" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
@@ -127,7 +114,39 @@
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="63.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" fx:id="xUpperBoundField">
+            <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="63.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" fx:id="xUpperBoundField">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets right="70.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Start N:" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label text="Finish N:" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <TextField  alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="63.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" fx:id="yLowerBoundField">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets right="70.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="63.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" fx:id="yUpperBoundField">
                <padding>
                   <Insets left="20.0" />
                </padding>

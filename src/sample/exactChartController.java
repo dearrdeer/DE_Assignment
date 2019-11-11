@@ -6,16 +6,17 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 
+import javax.xml.crypto.Data;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class exactChartController implements Initializable {
     @FXML
-    private NumberAxis xAxis;
+    private NumberAxis xAxis, xErrorAxis;
     @FXML
-    private NumberAxis yAxis;
+    private NumberAxis yAxis, yErrorAxis;
     @FXML
-    private LineChart<Number, Number> chart;
+    private LineChart<Number, Number> chart, errorChart;
 
     private int N;
     private double x0;
@@ -38,12 +39,14 @@ public class exactChartController implements Initializable {
         xAxis.setAutoRanging(false);
         xAxis.setLowerBound(Controller.xLowerBound);
         xAxis.setUpperBound(Controller.xUpperBound);
-        xAxis.setTickUnit(Controller.xScale);
 
-        yAxis.setTickUnit(Controller.yScale);
+        xErrorAxis.setAutoRanging(false);
+        xErrorAxis.setLowerBound(Controller.N_begin);
+        xErrorAxis.setUpperBound(Controller.N_end);
 
         chart.getStylesheets().add(Main.class.getResource("style.css").toExternalForm());
         chart.setCreateSymbols(false);
+        errorChart.setCreateSymbols(false);
     }
 
     public void plotChart(){
@@ -68,10 +71,26 @@ public class exactChartController implements Initializable {
         exactSeries.setName("Exact");
         chart.getData().addAll(exactSeries);
     }
+    public void plotMaxErrors(){
+        XYChart.Series runge = new XYChart.Series();
+        XYChart.Series improved = new XYChart.Series();
+        XYChart.Series euler = new XYChart.Series();
+
+        for(int i = Controller.N_begin; i <= Controller.N_end; i++){
+            runge.getData().add(new XYChart.Data(i, rungeKuttaChartController.getMaxError(i)));
+            improved.getData().add(new XYChart.Data(i, improvedEulerChartController.getMaxError(i)));
+            euler.getData().add(new XYChart.Data(i, eulerChartController.getMaxError(i)));
+        }
+        runge.setName("Runge-Kutta");
+        improved.setName("Improved Euler");
+        euler.setName("Euler");
+        errorChart.getData().addAll(runge, improved, euler);
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initParam();
         plotChart();
+        plotMaxErrors();
     }
 }

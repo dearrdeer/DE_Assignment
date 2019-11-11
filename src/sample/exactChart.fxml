@@ -11,14 +11,34 @@
 <?import javafx.scene.chart.NumberAxis?>
 
 <Pane focusTraversable="true" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.exactChartController">
-   <children>
-      <LineChart fx:id="chart" minHeight="720.0" minWidth="1024.0">
-        <xAxis>
-          <NumberAxis side="BOTTOM" fx:id="xAxis" />
-        </xAxis>
-        <yAxis>
-          <NumberAxis fx:id="yAxis" side="LEFT" />
-        </yAxis>
-      </LineChart>
-   </children>
+<children>
+    <GridPane prefHeight="675.0" prefWidth="1024.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="654.0" minHeight="10.0" prefHeight="338.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="469.0" minHeight="10.0" prefHeight="337.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="350.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <children>
+            <LineChart fx:id="chart" GridPane.rowIndex="0">
+                <xAxis>
+                    <NumberAxis side="BOTTOM" fx:id="xAxis" />
+                </xAxis>
+                <yAxis>
+                    <NumberAxis fx:id="yAxis" side="LEFT" />
+                </yAxis>
+            </LineChart>
+            <LineChart fx:id="errorChart" GridPane.rowIndex="1">
+                <xAxis>
+                    <NumberAxis side="BOTTOM" fx:id="xErrorAxis" />
+                </xAxis>
+                <yAxis>
+                    <NumberAxis fx:id="yErrorAxis" side="LEFT" />
+                </yAxis>
+            </LineChart>
+        </children>
+    </GridPane>
+</children>
 </Pane>

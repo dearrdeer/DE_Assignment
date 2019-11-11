@@ -15,9 +15,9 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     @FXML
-    TextField y0Field, x0Field, XField, NField, xScaleField, xLowerBoundField, xUpperBoundField;
-    public static double y0, x0, X, xScale, yScale, xLowerBound, xUpperBound;
-    public static int N;
+    TextField y0Field, x0Field, XField, NField, xLowerBoundField, xUpperBoundField, yLowerBoundField, yUpperBoundField;
+    public static double y0, x0, X, xLowerBound, xUpperBound;
+    public static int N, N_begin, N_end;
 
     @FXML
     private void buttonPressed(ActionEvent event) throws IOException {
@@ -27,9 +27,11 @@ public class Controller implements Initializable {
         X = Double.parseDouble(XField.getText());
         N = Integer.parseInt(NField.getText());
 
-        xScale = Double.parseDouble(xScaleField.getText());
         xLowerBound = Double.parseDouble(xLowerBoundField.getText());
         xUpperBound = Double.parseDouble(xUpperBoundField.getText());
+
+        N_begin = Integer.parseInt(yLowerBoundField.getText());
+        N_end = Integer.parseInt(yUpperBoundField.getText());
 
         Parent root = FXMLLoader.load(getClass().getResource("charts.fxml"));
         Scene scene = new Scene(root, 1024, 1000);
