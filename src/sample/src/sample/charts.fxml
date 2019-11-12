@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SecondStage">
+  <tabs>
+    <Tab text="Exact">
+      <content>
+        <fx:include fx:id="pane1" source="exactChart.fxml" />
+      </content>
+    </Tab>
+    <Tab text="Euler">
+      <content>
+        <fx:include fx:id="pane2" source="eulerChart.fxml" />
+      </content>
+    </Tab>
+    <Tab text="Improved Euler">
+      <content>
+        <fx:include fx:id="pane3" source="improvedEulerChart.fxml" />
+      </content>
+    </Tab>
+    <Tab text="Runge-Kutta">
+      <content>
+        <fx:include fx:id="pane4" source="rungeKuttaChart.fxml" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
