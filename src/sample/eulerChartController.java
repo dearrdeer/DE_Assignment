@@ -9,7 +9,7 @@ import javafx.scene.chart.XYChart;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class eulerChartController implements Initializable {
+public class eulerChartController implements Initializable, ChartControllerInterface {
     @FXML
     private NumberAxis xAxis, xLocalErrorAxis, xGlobalErrorAxis;
     @FXML

@@ -10,7 +10,7 @@ import javax.xml.crypto.Data;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class exactChartController implements Initializable {
+public class exactChartController implements Initializable, ChartControllerInterface {
     @FXML
     private NumberAxis xAxis, xErrorAxis;
     @FXML
